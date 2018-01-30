@@ -48,7 +48,7 @@ namespace DWMWindowClone
 
             //SetStyle(ControlStyles.UserPaint, true);
             //SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
-            SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            //SetStyle(ControlStyles.SupportsTransparentBackColor, true);
 
             // Set up the glass effect using padding as the defining glass region
             if (Win32.DwmIsCompositionEnabled())
@@ -97,10 +97,10 @@ namespace DWMWindowClone
             windowList.Hide();
             cloneButton.Hide();
             mmcss.Hide();
-            //BackColor = Color.Black;
+            BackColor = Color.Black;
             Win32.DwmRegisterThumbnail(this.Handle, _targetHwnd, out _thumbHandle);
             Rect targetWindow;
-            bool result = Win32.GetWindowRect(_targetHwnd, out targetWindow);
+            bool result = Win32.GetClientRect(_targetHwnd, out targetWindow);
             int width = targetWindow.Right - targetWindow.Left;
             int height = targetWindow.Bottom - targetWindow.Top;
             if(width >0 && height > 0){
