@@ -2,7 +2,9 @@
 
 A simple C# application to duplicate windows using Desktop Window Manager
 APIs. It should work on Windows Vista and later, but has presently only been
-tested on Windows 7.
+tested on Windows 7 and Windows 10.
+
+A prebuilt version is available at https://github.com/Einarin/DwmWindowClone/releases
 
 ## Building
 
